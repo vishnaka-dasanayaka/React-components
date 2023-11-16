@@ -1,23 +1,22 @@
-import Attendance from "../components/Attendance";
-import Batch from "../components/Batch";
-import IndividualAttendance from "../components/IndividualAttendance";
-import Sidebar from "../components/Sidebar";
-
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div >
-      <div className="flex">
-        <div className="w-1/4">
-          <Sidebar />
-        </div>
-        <div className="w-1/4 ">
-          <Batch />
-        </div>
+    <div className="grid m-10 grid-cols-4">
+      <div>
+        <Link to={"/loginpageone"}>
+          <button className="bg-channel_yellow py-1 px-2 uppercase font-extrabold hover:bg-channel_green hover:text-white rounded-lg texy-xl">
+            Login Page one
+          </button>
+        </Link>
+      </div>
 
-        <div className="w-2/4">
-          <Attendance />
-        </div>
+      <div>
+        <Link to={"/ioscalculator"}>
+          <button className="bg-channel_yellow hover:bg-channel_green uppercase font-extrabold py-1 px-2 rounded-lg hover:text-white">
+            IOS Calculator
+          </button>
+        </Link>
       </div>
     </div>
   );
